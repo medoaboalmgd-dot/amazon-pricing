@@ -1,4 +1,3 @@
-cat > src/lib/apify.js << 'EOF'
 export async function runScrapeAE(searchUrl, maxPages = 3) {
   const res = await fetch('/api/scrape-start', {
     method: 'POST',
@@ -33,4 +32,3 @@ export async function getRunResults(runId) {
   const res = await fetch(`/api/scrape-results?runId=${runId}`)
   return await res.json()
 }
-EOF
