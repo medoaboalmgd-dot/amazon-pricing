@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron-update-ae",
+      "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/cron-update-eg",
+      "schedule": "0 8,20 * * *"
+    }
+  ]
+}
